@@ -1,0 +1,35 @@
+commit 4a3a2f5ba1e11faea11544ca9b4c403a9befa1fd
+Merge: 8979b2c b05b4af
+Author: LutskyiE <99139283+LutskyiE@users.noreply.github.com>
+Date:   Thu Feb 17 13:41:59 2022 +0200
+
+    Merge pull request #2 from LutskyiE/dev
+    
+    Task 1 point 11
+
+commit b05b4aff63509292900c1df66726274a7b1a3e34
+Merge: 75c5120 2b0a1db
+Author: LutskyiE <99139283+LutskyiE@users.noreply.github.com>
+Date:   Thu Feb 17 13:35:17 2022 +0200
+
+    Merge pull request #1 from LutskyiE/Eugene-new_feature
+    
+    Created Eugene-new_feature branch and .gitignore file
+
+commit 2b0a1db0fe1ac42c37d8a549c7e8f4d828f73d5b
+Author: Eugene <lutskiy.evgeniy@gmail.com>
+Date:   Thu Feb 17 13:30:52 2022 +0200
+
+    Created Eugene-new_feature branch and .gitignore file
+
+commit 75c5120b7c59988affc6dba1db0359428bfaa470
+Author: Eugene <lutskiy.evgeniy@gmail.com>
+Date:   Thu Feb 17 12:32:44 2022 +0200
+
+    Created dev branch and dev_test_file.txt file
+
+commit 8979b2c059d02a3d41c066a39d35bd8be4d01482
+Author: Eugene <lutskiy.evgeniy@gmail.com>
+Date:   Thu Feb 17 12:27:31 2022 +0200
+
+    First commit. Created README.md file
