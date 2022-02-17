@@ -21,7 +21,7 @@ on: workflow_dispatch
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  task1_extra_1:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -36,6 +36,31 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
+      # Print content of log.txt file.
+      # Print: “Hello from “DEPLOY_VER variable’s content” commit”
+
         run: |
           cat Task1/log.txt
           echo “Hello from ${{ env.DEPLOY_VER }} commit”
+          
+jobs:
+  
+  task1_extra_2:
+    
+    runs-on: ubuntu-latest
+    needs  : [task1_extra_1]
+    env    : 
+           MONTH : "August" 
+            
+    steps:
+      - uses: actions/checkout@v2   
+        env : 
+           DAY__OF_THE_MONTH : "09"      
+      - name: Print system date and time
+        run: date
+        
+      - name: Print are variable’s content  
+        run: |
+          echo "Day - “$DAY__OF_THE_MONTH"; "
+          echo "Month - "$MONTH"; "
+          echo "Year - "$YEAR". "
