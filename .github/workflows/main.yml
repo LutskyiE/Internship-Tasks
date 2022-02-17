@@ -60,6 +60,6 @@ jobs:
         
       - name: Print are variable’s content  
         run: |
-          echo "Day - "$DAY_OF_THE_MONTH"; "
-          echo "Month - "$MONTH"; "
-          echo "Year - "$YEAR". "
+          echo "Day - $DAY_OF_THE_MONTH; "
+          echo "Month - $MONTH; "
+          echo "Year - $YEAR. "
