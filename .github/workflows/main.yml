@@ -60,7 +60,7 @@ jobs:
         
       - name: Print are variable’s content  
         run: |
-          echo "Day - $DAY_OF_THE_MONTH; "
+          echo Day - $DAY_OF_THE_MONTH;
           echo "Month - $MONTH; "
           echo "Year - $YEAR. "
           echo ${{ secrets.FAVORITE_DAY_OF_WEEK }}
