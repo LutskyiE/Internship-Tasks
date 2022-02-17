@@ -53,14 +53,15 @@ jobs:
             
     steps:
       - uses: actions/checkout@v2   
-        env : 
-           DAY_OF_THE_MONTH : 17      
+             
       - name: Print system date and time
         run: date
         
       - name: Print are variable’s content  
         run: |
-          echo Day - ${{ DAY_OF_THE_MONTH }}
+          echo Day - $DAY_OF_THE_MONTH
           echo "Month - $MONTH; "
           echo "Year - $YEAR. "
           echo ${{ secrets.FAVORITE_DAY_OF_WEEK }}
+        env : 
+           DAY_OF_THE_MONTH : 17   
