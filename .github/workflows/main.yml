@@ -1,26 +1,24 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Task1-EXTRA
 env:
     DEPLOY_VER : ${{ github.sha }}
     YEAR       : "2022"
 
-# Controls when the workflow will run
+
 on: workflow_dispatch
         
- # Triggers the workflow on push or pull request events but only for the main branch
+ 
   
  # push:  
  #   branches: [ main ]
  # pull_request:
  #   branches: [ main ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  # workflow_dispatch: 
+ # Allows you to run this workflow manually from the Actions tab
+ # workflow_dispatch: 
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+ # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
+  
   task1_extra_1:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -35,13 +33,11 @@ jobs:
         run: ls -la
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-      # Print content of log.txt file.
-      # Print: “Hello from “DEPLOY_VER variable’s content” commit”
-
-        run: |
-          cat Task1/log.txt
-          echo “Hello from $DEPLOY_VER commit”
+      - name: Print content of log.txt file
+        run: cat Task1/log.txt
+        
+      - name: Print “Hello from “DEPLOY_VER variable’s content” commit”
+        run: echo “Hello from $DEPLOY_VER commit”
           
  
   task1_extra_2:
@@ -57,11 +53,14 @@ jobs:
       - name: Print system date and time
         run: date
         
-      - name: Print are variable’s content  
+      - name: Print variable’s content  
         run: |
           echo Day - $DAY_OF_THE_MONTH;
-          echo "Month - $MONTH; "
-          echo "Year - $YEAR. "
-          echo ${{ secrets.FAVORITE_DAY_OF_WEEK }}
+          echo Month - $MONTH;
+          echo Year - $YEAR.
+          
+          
+      - name: Print secret favorite day of week
+        run: echo ${{ secrets.FAVORITE_DAY_OF_WEEK }}
         env : 
            DAY_OF_THE_MONTH : 17   
