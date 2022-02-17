@@ -36,4 +36,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           cat log.txt
-          echo “Hello from ${{ DEPLOY_VER }} commit”
+          echo “Hello from ${{ env.DEPLOY_VER }} commit”
