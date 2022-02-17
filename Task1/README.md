@@ -1,1 +1,1 @@
-Task 1 point 3
+Task 1 point 6
