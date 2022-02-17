@@ -58,9 +58,10 @@ jobs:
           echo Day - $DAY_OF_THE_MONTH;
           echo Month - $MONTH;
           echo Year - $YEAR.
-          
+        env : 
+           DAY_OF_THE_MONTH : 17   
+  
           
       - name: Print secret favorite day of week
         run: echo ${{ secrets.FAVORITE_DAY_OF_WEEK }}
-        env : 
-           DAY_OF_THE_MONTH : 17   
+        
