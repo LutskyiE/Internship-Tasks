@@ -1,0 +1,8 @@
+#!/bin/bash
+sudo apt-get update
+sudo apt install apache2
+myip='curl http://169.254.169.254/latest/meta-data/local-ipv4'
+echo "<h2> Hello World</h2><br>" > /var/www/html/index.html
+echo uname -r >> /var/www/html/index.html
+sudo service httpd start
+chkconfig httpd on
