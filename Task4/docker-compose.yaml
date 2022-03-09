@@ -1,0 +1,17 @@
+version: "3.9"
+volumes:
+  db_volume:
+
+services:
+  my_web_server:
+    image: lutskyie/internship:task4_3.2
+    deploy:
+     replicas: "5"
+    ports:
+     - 3000-3005:80
+  java_app:
+    build: app/
+  db:
+    image: mongo:latest
+    volumes:
+     - db_volume:/data/db

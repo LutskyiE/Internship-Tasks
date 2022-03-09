@@ -1,29 +1,4 @@
-/*data "aws_instance" "webserver_ip" {
-  tags = {
-    Name = "Ubuntu web server"
-  }
-}
-*/
-# receaving ubuntu ami id
-data "aws_ami" "latest_ubuntu" {
-  owners      = ["099720109477"]
-  most_recent = true
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
-  }
-}
 
-
-# receaving centOS ami id
-data "aws_ami" "latest_centos" {
-  owners      = ["374168611083"]
-  most_recent = true
-  filter {
-    name   = "name"
-    values = ["eu-central-1 image for x86_64 CentOS_7"]
-  }
-}
 
 output "latest_centos_ami_id" {
   value = data.aws_ami.latest_centos.id

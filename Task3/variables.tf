@@ -9,7 +9,7 @@ variable "instance_type" {
 }
 
 variable "open_ports" {
-  type    = list(any)
+  type    = list(string)
   default = ["22", "80", "443"]
 }
 
