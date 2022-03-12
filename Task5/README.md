@@ -1,5 +1,5 @@
 1. For deploying virtual machines I used AWS Console.  
-![alt text](screenshots/Ansible_instances.png "2 EC2 Amazon Linux 2 and 1 Ubuntu")  
+![alt text](screenshots/Ansible_EC2_instances.png "2 EC2 Amazon Linux 2 and 1 Ubuntu")  
 After starting the instances I connected to Ansible-Master by SSH and installed Ansible.  
 To install i used the following commands:  
 	sudo apt-add-repository ppa:ansible/ansible  
