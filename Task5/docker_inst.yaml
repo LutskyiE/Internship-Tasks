@@ -1,0 +1,22 @@
+---
+- name: Installing Docker to the hosts
+  hosts: task5
+  become: yes
+
+  vars:
+    source_file: /home/ubuntu/.ansible/docker_install.sh
+    dest_file: /home/ec2-user/docker_install.sh
+
+  tasks:
+  - name: Copy bash script for installing Docker
+    copy: src={{ source_file }} dest={{ dest_file}} mode=0555
+
+  - name: Run bash script for installing Docker
+    shell: sudo  {{ dest_file }} 
+  
+  - name: Running hello-world docker for test of successfully install
+    shell: docker run hello-world
+    register: results
+
+  - debug:
+      var: results
